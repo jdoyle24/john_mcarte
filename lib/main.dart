@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.lightBlue.shade200,
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,6 +29,57 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 )
             ),
+            Text('Nom Scientifique: Strombus gigas',
+            style: TextStyle(
+              fontFamily:  'Source Sans Pro',
+              color: Colors.black54,
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+              letterSpacing: 2.0),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical:10.0,horizontal:25.0),
+              child: Row(
+                children: [
+                  Icon(Icons.sunny,
+                  color: Colors.teal.shade900,
+                  ),
+                  SizedBox(
+                    width: 15.0, 
+                  ),
+                  Text(' Trouvé dans les Caraïbes',
+                  style: TextStyle(color: Colors.teal.shade600,
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0),
+                  )
+
+                ],
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.all(10.0),
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical:10.0,horizontal:25.0),
+              child: Row(
+                children: [
+                  Icon(Icons.water,
+                    color: Colors.teal.shade900,
+                  ),
+                  SizedBox(
+                    width: 15.0,
+                  ),
+                  Text(' Conservation status: At risk',
+                    style: TextStyle(color: Colors.teal.shade600,
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20.0),
+                  )
+
+                ],
+              ),
+            ),
+
           ],
         ),
       ),
